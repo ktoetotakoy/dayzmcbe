@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #272727;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    padding: 0px;
+    margin-top: 0px;
+    height: 1000px;
+  }
+  
+  .header {
+    width: 100%;
+    height: 80px;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+
+  .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  h1 {
+    font-family: "Unbounded", sans-serif;
+    margin-top: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #e6e6e6;
+  }
+  
+  iframe {
+    border-width: 0px;
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 40px;
+    padding: 0 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .item {
+    background-color: #2b2b2b;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #444;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: fit-content;
+  }
+  .item:hover{
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.541);
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+  }
+  .item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  
+  .item h2, .item p, .item button {
+    position: relative;
+    z-index: 1;
+  }
+  .item .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .item:hover .bg-video {
+    opacity: 1;
+  }  
+  
+  .item h2 {
+    font-family: "Unbounded", sans-serif;
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 400px;
+  }
+  
+  .item p {
+    margin-bottom: auto;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: "Unbounded", sans-serif;
+  }
+  .prewiew{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  button {
+    font-family: "Unbounded", sans-serif;
+    margin-top: 20px;
+    background-color: #b61919;
+    color: white;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: solid 0px floralwhite;
+  }
+  
+  button:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.03);
+    box-shadow: 0 0 1px hsla(0,0%,100%,.24),0 0px 20px rgba(255, 0, 0, 0.692);
+  }
+
+  .logo{
+    width: 120px;
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+
+  .logo:hover{
+    transform: scale(1.10);
+    transition: all 0.3s ease;
+  }
+
+  .header-content {
+    max-width: 2000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: end;
+    gap: 9px;
+  }
+  
+  .logo {
+    width: 120px;
+    transition: all 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .balance {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2e2e2e;
+    padding-left: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: "Unbounded", sans-serif;
+  }
+  
+  .discord-button {
+    font-family: "Unbounded", sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: #3b3b3b8f;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .discord-button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  .discord-button:hover {
+    transition: all 0.3s ease;
+    background-color: #975858;
+    box-shadow: 0px 0px 20px 5px rgba(105, 37, 37, 0.575);
+  }
+  
+  .discord-text {
+    display: inline;
+  }
+
+  .add-balance{
+    text-decoration: none;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #3f3f3f;
+    margin-left: 5px;
+    border-radius: 0px 5px 5px 0px;
+    transition: all 0.3s ease;
+  }
+  .add-balance:hover{
+    box-shadow: 0px 0px 20px 5px rgba(105, 37, 37, 0.575);
+    transition: all 0.3s ease;
+    background-color: #975858;
+    
+  }
+
+  .rules-button {
+    font-family: "Unbounded", sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: #3b3b3b8f;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .rules-button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  .rules-button:hover {
+    transition: all 0.3s ease;
+    background-color: #975858;
+    box-shadow: 0px 0px 20px 5px rgba(105, 37, 37, 0.575);
+  }
+  
+  .rules-text {
+    display: inline;
+  }
+
+  .donut-button {
+    font-family: "Unbounded", sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: #3b3b3b8f;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .donut-button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  .donut-button:hover {
+    transition: all 0.3s ease;
+    background-color: #975858;
+    box-shadow: 0px 0px 20px 5px rgba(105, 37, 37, 0.575);
+  }
+  
+  .donut-text {
+    display: inline;
+  }
+
+
+  .donut-text {
+    display: inline;
+  }
+
+  .home-button {
+    font-family: "Unbounded", sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: #3b3b3b8f;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .home-button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  .home-button:hover {
+    transition: all 0.3s ease;
+    background-color: #975858;
+    box-shadow: 0px 0px 20px 5px rgba(105, 37, 37, 0.575);
+  }
+  
+  .home-text {
+    display: inline;
+  }
+
+  @media (max-width: 700px) {
+    .balance {
+      font-size: 0.9rem;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  
+    .balance-label {
+      display: none;
+    }
+  
+    .discord-text {
+      display: none;
+    }
+  
+    .discord-button {
+      padding: 8px;
+    }
+    .rules-text {
+      display: none;
+    }
+  
+    .rules-button {
+      padding: 8px;
+    }
+    .donut-text {
+      display: none;
+    }
+  
+    .donut-button {
+      padding: 8px;
+    }
+
+    .home-text {
+      display: none;
+    }
+  
+    .home-button {
+      padding: 8px;
+    }
+    .logo {
+      width: 90px;
+    }
+
+    .items {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0 15px;
+    }
+
+    .item {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    .prewiew {
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+  
+    .item h2 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+  
+    .item p {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      height: auto;
+    }
+    
+    h1 {
+      padding: 0px 15px;
+    }
+
+    .item:hover{
+      box-shadow: 0 0 0px hsl(0, 0%, 100%),0 0px 20px rgba(0, 0, 0, 0);
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+    .parallax {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 910px) {
+    .balance {
+      font-size: 0.9rem;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  
+    .balance-label {
+      display: none;
+    }
+  
+    .discord-text {
+      display: none;
+    }
+  
+    .discord-button {
+      padding: 8px;
+    }
+    .rules-text {
+      display: none;
+    }
+  
+    .rules-button {
+      padding: 8px;
+    }
+    .donut-text {
+      display: none;
+    }
+  
+    .donut-button {
+      padding: 8px;
+    }
+
+    .home-text {
+      display: none;
+    }
+  
+    .home-button {
+      padding: 8px;
+    }
+    .logo {
+      width: 90px;
+    }
+
+  }
+
+
+  .parallax {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+    transition: transform 0.2s linear;
+  }
+  
+  .parallax-left {
+    left: 60px;
+    top: 300px;
+  }
+  
+  .parallax-right {
+    right: 60px;
+    top: 600px;
+  }
+  
+  .parallax img {
+    width: 400px;
+    opacity: 0.7;
+  }
+  

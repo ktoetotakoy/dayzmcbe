@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DayZ MCBE - Донат</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="parallax parallax-left">
+      <img src="head.png" alt="Block Left" />
+    </div>
+    <div class="parallax parallax-right">
+      <img src="33.png" alt="Block Right" />
+    </div>    
+    <header class="header">
+      <div class="header-content">
+        <img class="logo" src="dayz.png" alt="Лого DayZ" />
+        <div class="header-actions">
+          <a class="home-button" href="" target="_blank" title="Главная страница">
+            <img src="https://img.icons8.com/?size=100&id=9zcV0gKAozhn&format=png&color=FFFFFF" alt="Home" />
+            <span class="home-text">Главная</span>
+          </a>
+          <a class="donut-button" href="" target="_blank" title="Донат">
+            <img src="https://img.icons8.com/?size=100&id=59840&format=png&color=FFFFFF" alt="Donut" />
+            <span class="donut-text">Донат</span>
+          </a>
+          <a class="rules-button" href="" target="_blank" title="Наши правила">
+            <img src="https://img.icons8.com/?size=100&id=24981&format=png&color=FFFFFF" alt="Rules" />
+            <span class="rules-text">Правила</span>
+          </a>
+          <a class="discord-button" href="https://discord.gg/your-link" target="_blank" title="Наш Discord сервер">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png" alt="Discord" />
+            <span class="discord-text">Дискорд</span>
+          </a>
+          <div class="balance">
+            <span class="balance-label">Баланс:</span>
+            <span class="balance-amount">0</span>
+            <a class="add-balance" href="">+</a>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+    <h1>Покупка привилегий на DayZ MCBE</h1>
+    <div class="items">
+        <div class="item item-vip">
+          <video class="bg-video" src="video.mp4" muted loop autoplay playsinline></video>
+          <img class="prewiew" src="key.png" alt="">
+          <h2>Проходка ЗБТ</h2>
+          <p>100₽</p>
+          <button>Купить</button>
+        </div>
+
+        <div class="item item-hunter">
+          <video class="bg-video" src="video.mp4" muted loop autoplay playsinline></video>
+          <img class="prewiew" src="1.png" alt="">
+          <h2>Хантер</h2>
+          <p>399₽</p>
+          <button>Купить</button>
+        </div>
+        
+        <div class="item item-ronin">
+          <video class="bg-video" src="video.mp4" muted loop autoplay playsinline></video>
+          <img class="prewiew" src="2.png" alt="">
+          <h2>Ронин</h2>
+          <p>1000₽</p>
+          <button>Купить</button>
+        </div>
+
+        <div class="item item-anarchist">
+          <video class="bg-video" src="video.mp4" muted loop autoplay playsinline></video>
+          <img class="prewiew" src="3.png" alt="">
+          <h2>Анархист</h2>
+          <p>1500₽</p>
+          <button>Купить</button>
+        </div>
+
+        <div class="item item-legend">
+          <video  class="bg-video" src="video.mp4" muted loop autoplay playsinline></video>
+          <img class="prewiew" src="4.png" alt="">
+          <h2>Легенда</h2>
+          <p>1999₽</p>
+          <button>Купить</button>
+        </div>
+
+        <div class="item item-anarchist">
+          <video class="bg-video" src="video.mp4" muted loop autoplay playsinline></video>
+          <img class="prewiew" src="5.png" alt="">
+          <h2>Альфа</h2>
+          <p>2999₽</p>
+          <button>Купить</button>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('mousemove', (e) => {
+          const x = e.clientX / window.innerWidth - 0.01;
+          const y = e.clientY / window.innerHeight - 0.01;
+      
+          const left = document.querySelector('.parallax-left');
+          const right = document.querySelector('.parallax-right');
+      
+          left.style.transform = `translate(-${x * 100}px, -${y * 100}px)`;
+          right.style.transform = `translate(${x * 100}px, -${y * 100}px)`;
+        });
+      </script>
+      
+  </main>
+</body>
+</html>
